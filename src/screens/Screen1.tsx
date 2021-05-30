@@ -1,10 +1,16 @@
+import { StackScreenProps } from '@react-navigation/stack'
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
+import styles from '../themes/appTheme'
 
-const Screen1 = () => {
+interface Props extends StackScreenProps<any, any> {}
+
+const Screen1 = (props: Props) => {
+  const {navigation} = props
   return (
-    <View>
+    <View style={styles.globalMargin}>
       <Text>Screen 1</Text>
+      <Button title="screen 2" onPress={() => navigation.navigate("Screen2")}/>
     </View>
   )
 }
