@@ -9,13 +9,21 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <Stack.Navigator
+    initialRouteName="Screen1"
     screenOptions={{
-      cardStyle: {opacity: 1, },
+      headerStyle: {
+        elevation: 0,
+        shadowColor: 'transparent'
+      },
+      cardStyle: {
+        backgroundColor: 'white',
+        opacity: 1, 
+      },
     }}
     >
-      <Stack.Screen name="Screen1" component={Screen1} />
-      <Stack.Screen name="Screen2" component={Screen2} />
-      <Stack.Screen name="Screen3" component={Screen3} />
+      <Stack.Screen name="Screen1" options={{title: 'Page 1'}} component={Screen1} />
+      <Stack.Screen name="Screen2" options={{title: 'Page 2'}} component={Screen2} />
+      <Stack.Screen name="Screen3" options={{title: 'Page 3'}} component={Screen3} />
     </Stack.Navigator>
   );
 }

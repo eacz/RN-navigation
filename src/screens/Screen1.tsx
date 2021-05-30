@@ -9,7 +9,7 @@ const Screen1 = (props: Props) => {
   const {navigation} = props
   return (
     <View style={styles.globalMargin}>
-      <Text>Screen 1</Text>
+      <Text style={styles.title}>Screen 1</Text>
       <Button title="screen 2" onPress={() => navigation.navigate("Screen2")}/>
     </View>
   )

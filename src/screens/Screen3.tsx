@@ -9,7 +9,7 @@ const Screen3 = (props: Props) => {
   const {navigation} = props
   return (
     <View style={styles.globalMargin}>
-      <Text>Screen 3</Text>
+      <Text style={styles.title}>Screen 3</Text>
       <Button title="go back" onPress={() => navigation.pop()}/>
       <Button title="screen 1" onPress={() => navigation.popToTop()}/>
     </View>
