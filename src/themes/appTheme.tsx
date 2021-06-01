@@ -30,6 +30,16 @@ const styles = StyleSheet.create({
       width: 150,
       height: 150,
       borderRadius: 100,
+    },
+    menuContainer: {
+      marginVertical: 20,
+      marginHorizontal: 50,
+    },
+    menuItem: {
+      marginVertical: 10
+    },
+    menuItemText: {
+      fontSize: 18
     }
 });
 
