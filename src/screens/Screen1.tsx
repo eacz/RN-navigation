@@ -22,7 +22,7 @@ const Screen1 = (props: Props) => {
       <Text style={styles.title}>Screen 1</Text>
       <Button title="screen 2" onPress={() => navigation.navigate("Screen2")}/>
 
-      <Text>Navigation with arguments</Text>
+      <Text style={{marginVertical: 20, fontSize: 20}}>Navigation with arguments</Text>
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity
         style={{...styles.button, backgroundColor:'#5856d6'}}
