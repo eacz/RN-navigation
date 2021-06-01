@@ -1,6 +1,7 @@
 import { DrawerScreenProps } from '@react-navigation/drawer'
 import React, { useEffect } from 'react'
 import { View, Text, Button, TouchableOpacity } from 'react-native'
+import ButtonWithArgument from '../components/ButtonWithArgument'
 import styles from '../themes/appTheme'
 
 interface Props extends DrawerScreenProps<any, any> {}
@@ -24,24 +25,9 @@ const Screen1 = (props: Props) => {
 
       <Text style={{marginVertical: 20, fontSize: 20}}>Navigation with arguments</Text>
       <View style={{flexDirection: 'row'}}>
-        <TouchableOpacity
-        style={{...styles.button, backgroundColor:'#5856d6'}}
-        onPress={() => navigation.navigate("Person", {
-          id: 1,
-          name: 'Pepe'
-        })}
-        >
-          <Text style={styles.buttonText}>Pepe</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate("Person", {
-          id: 2,
-          name: 'Marie'
-        })}
-        >
-          <Text style={styles.buttonText}>Marie</Text>
-        </TouchableOpacity>
+        <ButtonWithArgument backgroundColor='#5856d6' person={{id: 1, name: 'Marie'} } {...props} />
+        <ButtonWithArgument backgroundColor='#ede342' person={{id: 2, name: 'Pepe'} } {...props} />
+        <ButtonWithArgument person={{id: 3, name: 'Juana'} } {...props} />
       </View>
     </View>
   )
