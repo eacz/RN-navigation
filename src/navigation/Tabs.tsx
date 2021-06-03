@@ -7,6 +7,7 @@ import Tab2Screen from '../screens/Tab2Screen';
 import StackNavigator from './StackNavigator';
 import  { colors } from '../themes/appTheme';
 import { Platform, Text } from 'react-native';
+import TopTabElements from './TopTabNavigator';
 
 const Tabs = () => {
   return Platform.OS === 'ios' ? <TabsIosElements /> : <TabAndroidElements />
@@ -41,7 +42,7 @@ const TabAndroidElements = () => {
     })}
     >
       <TabAndroid.Screen name="Tab1" options={{title: 'Tab1'}} component={Tab1Screen} />
-      <TabAndroid.Screen name="Tab2" options={{title: 'Tab2'}} component={Tab2Screen} />
+      <TabAndroid.Screen name="Tab2" options={{title: 'Tab2'}} component={TopTabElements} />
       <TabAndroid.Screen name="StackNavigator" options={{title: 'Stack'}} component={StackNavigator} />
     </TabAndroid.Navigator>
   );
@@ -88,7 +89,7 @@ const TabsIosElements = () => {
       {/* una manera de agregar iconos, en la misma definicion del tab */}
       {/*<Tab.Screen name="Tab1" options={{title: 'Tab1', tabBarIcon: (props) => <Text style={{color: props.color}}>T1</Text>}} component={Tab1Screen} />*/}
       <TabIos.Screen name="Tab1" options={{title: 'Tab1'}} component={Tab1Screen} />
-      <TabIos.Screen name="Tab2" options={{title: 'Tab2'}} component={Tab2Screen} />
+      <TabIos.Screen name="Tab2" options={{title: 'Tab2'}} component={TopTabElements} />
       <TabIos.Screen name="StackNavigator" options={{title: 'Stack'}} component={StackNavigator} />
     </TabIos.Navigator>
   );
