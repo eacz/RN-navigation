@@ -1,7 +1,6 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import SettingsScreen from '../screens/SettingsScreen';
-import StackNavigator from './StackNavigator';
 import {useWindowDimensions } from 'react-native';
 import MenuContent from '../components/navigation/MenuContent';
 import Tabs from './Tabs';
