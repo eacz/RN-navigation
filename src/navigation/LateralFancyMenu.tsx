@@ -4,6 +4,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import StackNavigator from './StackNavigator';
 import {useWindowDimensions } from 'react-native';
 import MenuContent from '../components/navigation/MenuContent';
+import Tabs from './Tabs';
 //import { createStackNavigator } from '@react-navigation/stack';
 
 const Drawer = createDrawerNavigator();
@@ -25,7 +26,7 @@ const LateralFancyMenu = () => {
       drawerType={width >=768 ? 'permanent' :'front'}
       drawerContent={props => <MenuContent {...props} />}
     >
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="Settings" component={SettingsScreen} />
     </Drawer.Navigator>
   );

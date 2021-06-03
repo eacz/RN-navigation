@@ -18,7 +18,7 @@ const MenuContent = ({navigation}: DrawerContentComponentProps<DrawerContentOpti
       <View style={styles.menuContainer}>
         <TouchableOpacity 
           style={styles.menuItem}
-          onPress={() => navigation.navigate('StackNavigator')}
+          onPress={() => navigation.navigate('Tabs')}
         >
           <Text style={styles.menuItemText}>Stack navigator</Text>
         </TouchableOpacity>
