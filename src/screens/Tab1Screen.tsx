@@ -1,21 +1,21 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import styles from '../themes/appTheme'
-import Icon from 'react-native-vector-icons/Ionicons';
-import { colors } from '../themes/appTheme';
+import TouchableIcon from '../components/TouchableIcon';
 
 const Tab1Screen = () => {
   return (
     <View style={styles.globalMargin}>
       <Text style={styles.title}>Icons</Text>
+      <Text>Select your favorite icon!</Text>
       <Text>
-        <Icon name="eye-outline" size={80} color={colors.primary} />
-        <Icon name="eye-off-outline" size={80} color={colors.primary} />
-        <Icon name="alarm-outline" size={80} color={colors.primary} />
-        <Icon name="add-outline" size={80} color={colors.primary} />
-        <Icon name="game-controller-outline" size={80} color={colors.primary} />
-        <Icon name="laptop-outline" size={80} color={colors.primary} />
-        <Icon name="power-outline" size={80} color={colors.primary} />
+        <TouchableIcon iconName="eye-outline" color="red" />
+        <TouchableIcon iconName="eye-off-outline"  />
+        <TouchableIcon iconName="alarm-outline" color="blue" />
+        <TouchableIcon iconName="add-outline" color="green" />
+        <TouchableIcon iconName="game-controller-outline" color="coral" />
+        <TouchableIcon iconName="laptop-outline" color="cadetblue"  />
+        <TouchableIcon iconName="power-outline" color="darkorange" />
       </Text>
     </View>
   )

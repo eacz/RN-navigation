@@ -24,7 +24,7 @@ const LateralFancyMenu = () => {
       drawerPosition="left"
       drawerType={width >=768 ? 'permanent' :'front'}
       drawerContent={props => <MenuContent {...props} />}
-      edgeWidth={200}
+      edgeWidth={150}
     >
       <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="Settings" component={SettingsScreen} />
