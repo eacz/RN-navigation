@@ -36,10 +36,17 @@ const styles = StyleSheet.create({
       marginHorizontal: 50,
     },
     menuItem: {
-      marginVertical: 10
+      marginVertical: 10,
+      flexDirection: 'row',
+      alignItems: 'center'
     },
     menuItemText: {
       fontSize: 18
+    },
+    menuButton: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 60,
     }
 });
 

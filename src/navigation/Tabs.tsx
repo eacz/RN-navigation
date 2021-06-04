@@ -3,10 +3,10 @@ import React from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Tab1Screen from '../screens/Tab1Screen';
-import Tab2Screen from '../screens/Tab2Screen';
+import Icon from 'react-native-vector-icons/Ionicons';
 import StackNavigator from './StackNavigator';
 import  { colors } from '../themes/appTheme';
-import { Platform, Text } from 'react-native';
+import { Platform } from 'react-native';
 import TopTabElements from './TopTabNavigator';
 
 const Tabs = () => {
@@ -28,16 +28,16 @@ const TabAndroidElements = () => {
         let iconName:string = '';
         switch(route.name){
           case 'Tab1':
-            iconName = 'T1'
+            iconName = 'logo-javascript'
             break;
           case 'Tab2':
-            iconName= 'T2'
+            iconName= 'logo-react'
             break;
           case 'StackNavigator':
-            iconName= 'ST'
+            iconName= 'file-tray-stacked-outline'
             break;
         } 
-        return <Text style={{color}}>{iconName}</Text>
+        return <Icon name={iconName} size={20} color={color} />
       }
     })}
     >
@@ -69,20 +69,20 @@ const TabsIosElements = () => {
         },
       }}
       screenOptions={({route}) => ({
-        tabBarIcon: ({color}) => {
+        tabBarIcon: ({color,}) => {
           let iconName:string = '';
           switch(route.name){
             case 'Tab1':
-              iconName = 'T1'
+              iconName = 'logo-javascript'
               break;
             case 'Tab2':
-              iconName= 'T2'
+              iconName= 'logo-react'
               break;
             case 'StackNavigator':
-              iconName= 'ST'
+              iconName= 'file-tray-stacked-outline'
               break;
           } 
-          return <Text style={{color}}>{iconName}</Text>
+          return <Icon name={iconName} size={20} color={color} />
         }
       })}
     >
